@@ -6,7 +6,7 @@ v2rew
 
 
 
-Auto generate v2ray to chromebook [crew](https://github.com/skycocker/chromebrew) package.
+Auto generate [v2ray](https://github.com/v2ray/v2ray-core) to chromebook [crew](https://github.com/skycocker/chromebrew) package.
 
 v2rew will build once a day.
 
