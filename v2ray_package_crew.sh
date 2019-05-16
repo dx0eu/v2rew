@@ -207,6 +207,8 @@ chromebrew() {
   git commit -m "v2ray $V2RAY_VERSION"
   git push origin master
   
+  $OK_SH create_pull_request skycocker/chromebrew "v2ray package" dx0eu:master master body="v2ray package"
+
   cd $BIN_PATH
 }
 
