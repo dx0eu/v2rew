@@ -1,9 +1,7 @@
 language: generic
-
 branches:
   only:
   - master
-
 jobs:
   include:
   - stage: Package
@@ -13,16 +11,11 @@ jobs:
     - sudo apt install tree grep jq -y
     - go get github.com/ericchiang/pup
     - sh -f ./v2ray_package_crew.sh
-
 before_install:
-- openssl aes-256-cbc -K $encrypted_c38783879da0_key -iv $encrypted_c38783879da0_iv -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+- openssl aes-256-cbc -K $encrypted_35c71fff909f_key -iv $encrypted_35c71fff909f_iv -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/id_rsa
 - cp .travis/ssh_config ~/.ssh/config
 - git config --global user.name dx0eu
 - git config --global user.email 0xdanger@protonmail.com
-
-
-
-
