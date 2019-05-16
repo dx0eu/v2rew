@@ -207,7 +207,12 @@ chromebrew() {
   git commit -m "v2ray $V2RAY_VERSION"
   git push origin master
   
-  $OK_SH create_pull_request skycocker/chromebrew "v2ray package" dx0eu:master master body="v2ray package"
+  $OK_SH create_pull_request \
+    skycocker/chromebrew \
+    "v2ray package" \
+    dx0eu:master \
+    master \
+    body="A platform for building proxies to bypass network restrictions. https://www.v2ray.com/ github repo https://github.com/v2ray/v2ray-core"
 
   cd $BIN_PATH
 }
