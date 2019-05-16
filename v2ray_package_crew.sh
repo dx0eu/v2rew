@@ -105,8 +105,8 @@ gen_dirlist() {
 
 
 release() {
-  TAG=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
-#  TAG=$V2RAY_VERSION
+#  TAG=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
+  TAG=$V2RAY_VERSION
 
 #  echo $OK_SH create_release $USER $REPO $TAG
   $OK_SH create_release $USER $REPO $TAG
