@@ -7,10 +7,10 @@ jobs:
   - stage: Package
     name: Create v2ray package for crew
     script:
-    - sudo apt update
-    - sudo apt install tree grep jq -y
+    # - sudo apt update
+    # - sudo apt install tree grep jq -y
     - go get github.com/ericchiang/pup
-    - sh -f ./v2ray_package_crew.sh
+    - sh -f ./v2.v2ray_package_crew.sh
 before_install:
 - openssl aes-256-cbc -K $encrypted_35c71fff909f_key -iv $encrypted_35c71fff909f_iv -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
