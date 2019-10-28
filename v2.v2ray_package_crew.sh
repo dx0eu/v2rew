@@ -55,9 +55,11 @@ chromebrew() {
   git clone git@github.com:dx0eu/chromebrew.git
   cd chromebrew
 
-  git remote add skyc https://github.com/skycocker/chromebrew.git
-  git fetch skyc
-  git pull skyc master
+
+#  git remote add skyc https://github.com/skycocker/chromebrew.git
+#  git fetch skyc
+#  git pull skyc master
+
 
   cp $BIN_PATH/v2ray.final.rb packages/v2ray.rb
 
@@ -67,7 +69,7 @@ chromebrew() {
 
   $OK_SH create_pull_request \
     skycocker/chromebrew \
-    "v2ray package" \
+    "Update v2ray to $V2RAY_VERSION" \
     dx0eu:master \
     master \
     body="A platform for building proxies to bypass network restrictions. https://www.v2ray.com/ github repo https://github.com/v2ray/v2ray-core"
