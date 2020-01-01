@@ -55,10 +55,9 @@ chromebrew() {
   git clone git@github.com:dx0eu/chromebrew.git
   cd chromebrew
 
-
-  git remote add skyc https://github.com/skycocker/chromebrew.git
-  git fetch skyc
-  git pull skyc master
+#  git remote add skyc https://github.com/skycocker/chromebrew.git
+#  git fetch skyc
+#  git pull skyc master
 
   git checkout -b update-v2ray-package
 
