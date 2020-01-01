@@ -52,12 +52,16 @@ rb_tpl() {
 
 chromebrew() {
   cd /tmp
-  git clone git@github.com:dx0eu/chromebrew.git
+  git clone https://github.com/dx0eu/chromebrew.git
   cd chromebrew
 
 #  git remote add skyc https://github.com/skycocker/chromebrew.git
 #  git fetch skyc
 #  git pull skyc master
+
+  git config --global credential.helper store
+  git config --global user.email 0xdanger@protonmail.com
+  git config --global user.name dx0eu
 
   git checkout -b update-v2ray-package
 
