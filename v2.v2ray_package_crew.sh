@@ -52,7 +52,7 @@ rb_tpl() {
 
 chromebrew() {
 
-  sudo echo "https://$(echo $GH_ACCOUNT)@github.com" > /root/.git-credentials
+  echo "https://$(echo $GH_ACCOUNT)@github.com" > ~/.git-credentials
 
   git config --global credential.helper store
   git config --global user.email 0xdanger@protonmail.com
