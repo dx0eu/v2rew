@@ -67,6 +67,9 @@ chromebrew() {
 #  git pull skyc master
 
 
+  git branch -D update-v2ray-package
+  git push origin :update-v2ray-package
+
   git checkout -b update-v2ray-package
 
   cp $BIN_PATH/v2ray.final.rb packages/v2ray.rb
