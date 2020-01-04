@@ -77,7 +77,10 @@ chromebrew() {
   git add .
   git commit -m "Update v2ray to $V2RAY_VERSION"
   git push origin update-v2ray-package
-#  git push origin master
+
+  git checkout master
+  git merge --no-ff update-v2ray-package
+  git push origin master
 
   $OK_SH create_pull_request \
     skycocker/chromebrew \
