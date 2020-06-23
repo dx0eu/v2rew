@@ -82,15 +82,28 @@ chromebrew() {
 #  git merge --no-ff update-v2ray-package
 #  git push origin master
 
-  git pull origin master
-  git checkout update-v2ray-package
-  git merge master
 
+#  git pull origin master
+#  git checkout update-v2ray-package
+#  git merge master
+
+#  cp $BIN_PATH/v2ray.final.rb packages/v2ray.rb
+#  git add .
+#  git commit -m "Update v2ray to $V2RAY_VERSION"
+
+#  git push origin update-v2ray-package
+
+
+  git checkout master
+  git pull upstream master
+  git branch -D update-v2ray-package
+  git checkout -b update-v2ray-package
+  
   cp $BIN_PATH/v2ray.final.rb packages/v2ray.rb
-  git add .
+  git add v2ray.rb
   git commit -m "Update v2ray to $V2RAY_VERSION"
+  git push origin -f update-v2ray-package
 
-  git push origin update-v2ray-package
 
   $OK_SH create_pull_request \
     skycocker/chromebrew \
